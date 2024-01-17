@@ -1,0 +1,18 @@
+html {
+  font-size: 16px;
+}
+
+.container {
+  margin: 0 auto;
+  width: 90%;
+  max-width: 1200px;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+
+  @media(min-width: 900px) {
+    flex-direction: row;
+  }
+}
