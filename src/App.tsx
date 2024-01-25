@@ -19,6 +19,32 @@ function Button({ name, text, arr, str, handleClick }: ButtonProps) {
   )
 }
 
+type TimeCardProps = {
+  id: string;
+  icon: string;
+  title: string;
+  stats: Array<number>;
+  time: string
+}
+
+function TimeCard({ id, icon, title, stats, time }: TimeCardProps) {
+  return (
+    <div id={id} className="card time-card">
+      <div className="card-top">
+        <img className='card__icon' src={icon} alt="" />
+      </div>
+      <div className="card-bottom">
+        <div className="card-title-container row--mobile">
+          <h2 className="card__title">{title}</h2>
+          <button className='card__ellipsis'><img src={ellipsis} alt="" /></button>
+        </div>
+        <h1 className="card__hours">{stats[0]}hrs</h1>
+        <h2 className="card__last-hours">{time} - {stats[1]}hrs</h2>
+      </div>
+    </div>
+  )
+}
+
 function App() {
 
   const [stats, setStats] = useState(weekly);
@@ -61,49 +87,12 @@ function App() {
           </div>
           <div className="col-right">
             <div className="grid">
-              <div className="card time-card">
-                <div className="card-top">
-                  <img className='card__icon' src={work} alt="" />
-                </div>
-                <div className="card-bottom">
-                  <div className="card-title-container row--mobile">
-                    <h2 className="card__title">Work</h2>
-                    <button className='card__ellipsis'><img src={ellipsis} alt="" /></button>
-                  </div>
-                  <h1 className="card__hours">{stats[0][0]}hrs</h1>
-                  <h2 className="card__last-hours">{time} - {stats[0][1]}hrs</h2>
-                </div>
-              </div>
-              <div className="card time-card">
-                <div className="card-top">
-                  <img className='card__icon' src={play} alt="" />
-                </div>
-                <div className="card-bottom"></div>
-              </div>
-              <div className="card time-card">
-                <div className="card-top">
-                  <img className='card__icon' src={study} alt="" />
-                </div>
-                <div className="card-bottom"></div>
-              </div>
-              <div className="card time-card">
-                <div className="card-top">
-                  <img className='card__icon' src={exercise} alt="" />
-                </div>
-                <div className="card-bottom"></div>
-              </div>
-              <div className="card time-card">
-                <div className="card-top">
-                  <img className='card__icon' src={social} alt="" />
-                </div>
-                <div className="card-bottom"></div>
-              </div>
-              <div className="card time-card">
-                <div className="card-top">
-                  <img className='card__icon' src={selfCare} alt="" />
-                </div>
-                <div className="card-bottom"></div>
-              </div>
+              <TimeCard id={"work"} icon={work} title={"Work"} stats={stats[0]} time={time} />
+              <TimeCard id={"play"} icon={play} title={"Play"} stats={stats[1]} time={time} />
+              <TimeCard id={"study"} icon={study} title={"Study"} stats={stats[2]} time={time} />
+              <TimeCard id={"exercise"} icon={exercise} title={"Exercise"} stats={stats[3]} time={time} />
+              <TimeCard id={"social"} icon={social} title={"Social"} stats={stats[4]} time={time} />
+              <TimeCard id={"self-care"} icon={selfCare} title={"Self Care"} stats={stats[5]} time={time} />
             </div>
           </div>
         </div>
