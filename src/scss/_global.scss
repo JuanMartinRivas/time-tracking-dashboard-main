@@ -1,5 +1,9 @@
 html {
-  font-size: 16px;
+  font-size: 18px;
+}
+
+body {
+  font-family: 'Rubik', sans-serif;
 }
 
 .container {
@@ -11,6 +15,10 @@ html {
 .row {
   display: flex;
   flex-direction: column;
+
+  &--mobile {
+    flex-direction: row;
+  }
 
   @media(min-width: 900px) {
     flex-direction: row;
