@@ -17,6 +17,7 @@ body {
   flex-direction: column;
 
   &--mobile {
+    display: flex;
     flex-direction: row;
   }
 

@@ -11,11 +11,12 @@ type ButtonProps = {
   arr: Array<number[]>;
   str: string;
   handleClick: (option: Array<number[]>) => () => void;
+  selected: boolean;
 };
 
-function Button({ name, text, arr, str, handleClick }: ButtonProps) {
+function Button({ name, text, arr, str, handleClick, selected }: ButtonProps) {
   return (
-    <button onClick={handleClick(arr, str)} key={name}>{text}</button>
+    <button onClick={handleClick(arr, str)} className={selected ? 'selected' : ''} key={name}>{text}</button>
   )
 }
 
@@ -49,13 +50,13 @@ function App() {
 
   const [stats, setStats] = useState(weekly);
   const [time, setTime] = useState("Last Week");
+  const [selectedButton, setSelectedButton] = useState("weekly");
 
-  const handleButtonClick = (option: Array<number[]>, str: string) => () => {
+  const handleButtonClick = (option: Array<number[]>, str: string, name: string) => () => {
     setStats(option);
     setTime(str);
+    setSelectedButton(name);
   }
-
-  // console.log(stats[0][0])
 
   return (
     <>
@@ -73,13 +74,13 @@ function App() {
               <div className="card-top">
                 <ul className="user-card__list">
                   <li className="user-card__list-item">
-                    <Button name={"daily"} text={"Daily"} arr={daily} str={"Yesterday"} handleClick={handleButtonClick} />
+                    <Button name={"daily"} text={"Daily"} arr={daily} str={"Yesterday"} selected={selectedButton==="daily"} handleClick={(arr, str) => handleButtonClick(arr, str, "daily")} />
                   </li>
                   <li className="user-card__list-item">
-                    <Button name={"weekly"} text={"Weekly"} arr={weekly} str={"Last Week"} handleClick={handleButtonClick} />
+                    <Button name={"weekly"} text={"Weekly"} arr={weekly} str={"Last Week"} selected={selectedButton==="weekly"} handleClick={(arr, str) => handleButtonClick(arr, str, "weekly")} />
                   </li>
                   <li className="user-card__list-item">
-                    <Button name={"monthly"} text={"Monthly"} arr={monthly} str={"Last Month"} handleClick={handleButtonClick} />
+                    <Button name={"monthly"} text={"Monthly"} arr={monthly} str={"Last Month"} selected={selectedButton==="monthly"} handleClick={(arr, str) => handleButtonClick(arr, str, "monthly")} />
                   </li>
                 </ul>
               </div>
