@@ -1,2 +1,74 @@
-// main {
-// }
+main {
+    background-color: $very-dark-blue;
+
+    .card-top,
+    .card-bottom {
+        border-radius: 15px;
+    }
+
+    .user-card {
+        position: relative;
+        margin-top: 4em;
+
+        .card-top {
+            position: relative;
+            display: flex;
+            gap: 1em;
+            justify-content: center;
+            align-items: center;
+            background-color: $blue;
+            padding: 1.5em 1em;
+            z-index: 1;
+
+            img {
+                width: 25%;
+                border-radius: 100%;
+                border: solid 3px #FFF;
+            }
+
+            .text-container {
+                font-size: 1rem;
+                color: $pale-blue;
+
+                .user-card__name {
+                    font-size: 1.5rem;
+                    font-weight: 300;
+                    color: #FFF;
+                }
+            }
+        }
+
+        .card-bottom {
+            position: relative;
+            background-color: $dark-blue;
+            padding: .5em 2em;
+            padding-top: 2.5em;
+            top: -2em;
+            z-index: 0;
+
+            .user-card__list {
+                display: flex;
+                justify-content: space-between;
+                list-style: none;
+                margin: 0;
+                padding: 0;
+
+                button.selected{
+                    color: #FFF;
+                }
+
+                button {
+                    color: $desaturated-blue;
+                    background: none;
+                    border: none;
+                    cursor: pointer;
+                    transition: .25s;
+
+                    &:hover{
+                        color: #FFF;
+                    }
+                }
+            }
+        }
+    }
+}

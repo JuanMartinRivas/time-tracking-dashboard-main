@@ -71,16 +71,16 @@ function App() {
                   <h1 className="user-card__name">Jeremy Robson</h1>
                 </div>
               </div>
-              <div className="card-top">
+              <div className="card-bottom">
                 <ul className="user-card__list">
                   <li className="user-card__list-item">
-                    <Button name={"daily"} text={"Daily"} arr={daily} str={"Yesterday"} selected={selectedButton==="daily"} handleClick={(arr, str) => handleButtonClick(arr, str, "daily")} />
+                    <Button name={"daily"} text={"Daily"} arr={daily} str={"Yesterday"} selected={selectedButton === "daily"} handleClick={(arr, str) => handleButtonClick(arr, str, "daily")} />
                   </li>
                   <li className="user-card__list-item">
-                    <Button name={"weekly"} text={"Weekly"} arr={weekly} str={"Last Week"} selected={selectedButton==="weekly"} handleClick={(arr, str) => handleButtonClick(arr, str, "weekly")} />
+                    <Button name={"weekly"} text={"Weekly"} arr={weekly} str={"Last Week"} selected={selectedButton === "weekly"} handleClick={(arr, str) => handleButtonClick(arr, str, "weekly")} />
                   </li>
                   <li className="user-card__list-item">
-                    <Button name={"monthly"} text={"Monthly"} arr={monthly} str={"Last Month"} selected={selectedButton==="monthly"} handleClick={(arr, str) => handleButtonClick(arr, str, "monthly")} />
+                    <Button name={"monthly"} text={"Monthly"} arr={monthly} str={"Last Month"} selected={selectedButton === "monthly"} handleClick={(arr, str) => handleButtonClick(arr, str, "monthly")} />
                   </li>
                 </ul>
               </div>
