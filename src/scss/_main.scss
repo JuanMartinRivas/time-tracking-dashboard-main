@@ -1,6 +1,4 @@
 main {
-    background-color: $very-dark-blue;
-
     .card-top,
     .card-bottom {
         border-radius: 15px;
@@ -41,8 +39,8 @@ main {
         .card-bottom {
             position: relative;
             background-color: $dark-blue;
-            padding: .5em 2em;
-            padding-top: 2.5em;
+            padding: 1em 2em;
+            padding-top: 3em;
             top: -2em;
             z-index: 0;
 

@@ -1,0 +1,36 @@
+.time-card {
+    position: relative;
+
+    .card-top {
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        justify-content: right;
+        height: 5em;
+
+        .card__icon {
+            position: relative;
+            top: -.5em;
+            right: 1em;
+        }
+    }
+
+    .card-bottom {
+        position: relative;
+        font-size: 1rem;
+        font-weight: 300;
+        background-color: $dark-blue;
+        color: #FFF;
+        padding: 1.5em;
+        top: -2.75em;
+
+        .card-title-container {
+            justify-content: space-between;
+        }
+
+        .card-info-container {
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+}

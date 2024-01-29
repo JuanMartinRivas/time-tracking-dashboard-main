@@ -39,8 +39,10 @@ function TimeCard({ id, icon, title, stats, time }: TimeCardProps) {
           <h2 className="card__title">{title}</h2>
           <button className='card__ellipsis'><img src={ellipsis} alt="" /></button>
         </div>
-        <h1 className="card__hours">{stats[0]}hrs</h1>
-        <h2 className="card__last-hours">{time} - {stats[1]}hrs</h2>
+        <div className="card-info-container row--mobile">  
+          <h1 className="card__hours">{stats[0]}hrs</h1>
+          <h2 className="card__last-hours">{time} - {stats[1]}hrs</h2>
+        </div>
       </div>
     </div>
   )
