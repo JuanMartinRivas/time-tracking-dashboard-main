@@ -21,16 +21,48 @@
         font-weight: 300;
         background-color: $dark-blue;
         color: #FFF;
-        padding: 1.5em;
+        padding: 1.25em;
         top: -2.75em;
+        cursor: pointer;
+        transition: .25s;
+
+        &:hover {
+            filter: brightness(150%);
+        }
 
         .card-title-container {
             justify-content: space-between;
+
+            .card__title {
+                font-weight: 400;
+            }
+
+            .card__ellipsis {
+                background: none;
+                border: none;
+                padding: 0;
+                cursor: pointer;
+                transition: .25s;
+
+                &:hover {
+                    filter: brightness(150%);
+                }
+            }
         }
 
         .card-info-container {
             justify-content: space-between;
             align-items: center;
+
+            .card__hours {
+                font-weight: 300;
+            }
+
+            .card__last-hours {
+                font-size: 1rem;
+                font-weight: 300;
+                color: $desaturated-blue;
+            }
         }
     }
 }
