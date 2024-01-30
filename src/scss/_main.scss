@@ -1,4 +1,5 @@
 main {
+
     .card-top,
     .card-bottom {
         border-radius: 15px;
@@ -17,6 +18,10 @@ main {
             background-color: $blue;
             padding: 1.5em 1em;
             z-index: 1;
+
+            @media(min-width:900px) {
+                flex-direction: column;
+            }
 
             img {
                 width: 25%;
@@ -51,7 +56,11 @@ main {
                 margin: 0;
                 padding: 0;
 
-                button.selected{
+                @media(min-width:900px) {
+                    flex-direction: column;
+                }
+
+                button.selected {
                     color: #FFF;
                 }
 
@@ -62,7 +71,7 @@ main {
                     cursor: pointer;
                     transition: .25s;
 
-                    &:hover{
+                    &:hover {
                         color: #FFF;
                     }
                 }
