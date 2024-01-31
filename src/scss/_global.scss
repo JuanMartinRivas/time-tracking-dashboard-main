@@ -9,27 +9,31 @@ body {
 
 .container {
   margin: 0 auto;
-  width: 90%;
+  width: 85%;
   max-width: 1200px;
 
   @media(min-width:900px) {
     transform: translateY(25%);
 
-    @media (display-mode:fullscreen) {
-      transform: translateY(40%);
-    }
+    // @media (display-mode:fullscreen) {
+    //   transform: translateY(40%);
+    // }
   }
 
 }
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 0 1.5em;
 }
 
 .col-right {
   width: 100%;
+
+  @media (min-width:900px) {
+    width: 70%;
+  }
 }
 
 .row {
@@ -37,6 +41,7 @@ body {
   flex-direction: column;
   gap: 1.5em;
   align-items: center;
+  justify-content: center;
 
   &--mobile {
     display: flex;

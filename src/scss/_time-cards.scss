@@ -33,7 +33,12 @@
         .card-title-container {
             justify-content: space-between;
 
+            @media(min-width:900px) {
+                margin-bottom: .75em;
+            }
+
             .card__title {
+                font-size: 1rem;
                 font-weight: 400;
             }
 
@@ -55,11 +60,12 @@
             align-items: center;
 
             @media(min-width:900px) {
-                flex-direction: column;
+                display: block;
             }
 
             .card__hours {
                 font-weight: 300;
+                font-size: 2.75rem;
             }
 
             .card__last-hours {
