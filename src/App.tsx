@@ -10,7 +10,7 @@ type ButtonProps = {
   text: string;
   arr: Array<number[]>;
   str: string;
-  handleClick: (option: Array<number[]>) => () => void;
+  handleClick: (option: Array<number[]>, str: string) => () => void;
   selected: boolean;
 };
 
@@ -39,7 +39,7 @@ function TimeCard({ id, icon, title, stats, time }: TimeCardProps) {
           <h2 className="card__title">{title}</h2>
           <button className='card__ellipsis'><img src={ellipsis} alt="" /></button>
         </div>
-        <div className="card-info-container row--mobile">  
+        <div className="card-info-container row--mobile">
           <h1 className="card__hours">{stats[0]}hrs</h1>
           <h2 className="card__last-hours">{time} - {stats[1]}hrs</h2>
         </div>
