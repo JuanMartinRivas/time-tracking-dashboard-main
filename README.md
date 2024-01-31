@@ -34,7 +34,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Solution]()
+- Solution URL: [Solution](https://www.frontendmentor.io/solutions/time-tracking-dashboard-T6TKQboUOR)
 - Live Site URL: [Site](https://juanmartinrivas.github.io/time-tracking-dashboard-main)
 
 ## My process
